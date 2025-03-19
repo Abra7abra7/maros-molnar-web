@@ -111,7 +111,7 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">Fitness tréning</h3>
                 <div className="space-y-4">
                   {services.fitness.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                       </CardHeader>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">Fyzioterapia</h3>
                 <div className="space-y-4">
                   {services.physio.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                       </CardHeader>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">Extrémne Premeny</h3>
                 <div className="space-y-4">
                   {services.transformation.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                       </CardHeader>
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">Profesionálni športovci</h3>
                 <div className="space-y-4">
                   {services.athletes.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                       </CardHeader>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <SectionReveal>
             <h2 className="text-3xl font-bold mb-12 text-center text-white">Prečo si vybrať moje služby?</h2>
@@ -231,7 +231,7 @@ export default function ServicesPage() {
               }
             ].map((feature, index) => (
               <SectionReveal key={index} direction="up" delay={0.1 * index}>
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-800">
                   <div className="bg-red-600 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
                     <Check size={20} />
                   </div>
