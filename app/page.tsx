@@ -36,10 +36,15 @@ export default function Home() {
         {/* Pozadie s paralaxovým efektom */}
         <div className="relative py-20 overflow-hidden bg-black">
           <ParallaxEffect speed={-0.2} className="absolute inset-0 z-0">
-            <div 
-              className="w-full h-[120%] bg-cover bg-center opacity-20"
-              style={{ backgroundImage: "url('/images/services/fitness-training-1.jpg')" }}
-            />
+            <div className="w-full h-[120%] relative">
+              <Image
+                src="/images/services/fitness-training-1.jpg"
+                alt="Fitness Training Background"
+                fill
+                className="object-cover opacity-20"
+                priority
+              />
+            </div>
           </ParallaxEffect>
           
           <div className="relative z-10">

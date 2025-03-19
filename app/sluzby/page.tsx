@@ -24,10 +24,15 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <ParallaxEffect speed={-0.3} className="absolute inset-0">
-          <div 
-            className="w-full h-[120%] bg-cover bg-center opacity-30"
-            style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
-          />
+          <div className="w-full h-[120%] relative">
+            <Image
+              src="/images/services-bg.jpg"
+              alt="Services Background"
+              fill
+              className="object-cover opacity-30"
+              priority
+            />
+          </div>
         </ParallaxEffect>
         <div className="container mx-auto px-4 relative z-10">
           <SectionReveal>

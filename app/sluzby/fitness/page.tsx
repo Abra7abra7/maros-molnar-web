@@ -15,10 +15,15 @@ export default function FitnessPage() {
     <>
       {/* Hero Section */}
       <section className="relative py-24 bg-black text-white">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/services/fitness-training-1.jpg')" }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/services/fitness-training-1.jpg"
+            alt="Fitness Training Background"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">{services.fitness.title}</h1>

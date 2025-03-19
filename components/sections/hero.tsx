@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
@@ -17,10 +18,14 @@ export default function Hero({
   return (
     <section className="relative min-h-screen flex items-center justify-center text-white">
       {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/services/fitness-training-2.jpg')" }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src="/images/services/fitness-training-2.jpg"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/70" />
       </div>
 

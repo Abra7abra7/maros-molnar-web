@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import SectionReveal from "@/components/animations/section-reveal";
 import ParallaxEffect from "@/components/animations/parallax-effect";
 import ScrollProgress from "@/components/ui/scroll-progress";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -19,10 +20,15 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative py-24 bg-black text-white overflow-hidden">
         <ParallaxEffect speed={-0.3} className="absolute inset-0">
-          <div 
-            className="w-full h-[120%] bg-cover bg-center opacity-30"
-            style={{ backgroundImage: "url('/images/services/fitness-training-1.jpg')" }}
-          />
+          <div className="w-full h-[120%] relative">
+            <Image
+              src="/images/services/fitness-training-1.jpg"
+              alt="Contact Background"
+              fill
+              className="object-cover opacity-30"
+              priority
+            />
+          </div>
         </ParallaxEffect>
         <div className="container mx-auto px-4 relative z-10">
           <SectionReveal>
