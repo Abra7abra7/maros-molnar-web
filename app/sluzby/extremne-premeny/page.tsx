@@ -71,7 +71,7 @@ export default function ExtremnePremenPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Michal, -35 kg za 10 mesiacov</h3>
                 <p className="text-gray-300 mb-6">
-                  "Celý život som bojoval s nadváhou, ale nikdy som nemal dostatok motivácie a správne vedenia. Keď som stretol Maroša, všetko sa zmenilo. Jeho individuálny prístup, odborné znalosti a neustála podpora mi pomohli nielen schudnúť, ale aj zmeniť svoj životný štýl. Dnes sa cítim zdravší, silnejší a plný energie."
+                  &quot;Celý život som bojoval s nadváhou, ale nikdy som nemal dostatok motivácie a správne vedenia. Keď som stretol Maroša, všetko sa zmenilo. Jeho individuálny prístup, odborné znalosti a neustála podpora mi pomohli nielen schudnúť, ale aj zmeniť svoj životný štýl. Dnes sa cítim zdravší, silnejší a plný energie.&quot;
                 </p>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start">
@@ -106,7 +106,7 @@ export default function ExtremnePremenPage() {
               <div className="md:order-1">
                 <h3 className="text-2xl font-bold mb-4 text-white">Jana, -28 kg za 8 mesiacov</h3>
                 <p className="text-gray-300 mb-6">
-                  "Po druhom tehotenstve som sa nevedela zbaviť nadbytočných kilogramov. Vyskúšala som rôzne diéty, ale výsledky boli len dočasné. Maroš mi pomohol pochopiť, že nejde len o chudnutie, ale o celkovú zmenu životného štýlu. Naučil ma, ako sa správne stravovať a cvičiť tak, aby som dosiahla trvalé výsledky. Dnes sa cítim sebavedomejšie a mám oveľa viac energie na moje deti."
+                  &quot;Po druhom tehotenstve som sa nevedela zbaviť nadbytočných kilogramov. Vyskúšala som rôzne diéty, ale výsledky boli len dočasné. Maroš mi pomohol pochopiť, že nejde len o chudnutie, ale o celkovú zmenu životného štýlu. Naučil ma, ako sa správne stravovať a cvičiť tak, aby som dosiahla trvalé výsledky. Dnes sa cítim sebavedomejšie a mám oveľa viac energie na moje deti.&quot;
                 </p>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start">
@@ -141,7 +141,7 @@ export default function ExtremnePremenPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Peter, -42 kg za 14 mesiacov</h3>
                 <p className="text-gray-300 mb-6">
-                  "Moja práca v IT sektore znamenala sedavý životný štýl a nezdravé stravovacie návyky. S váhou 130 kg som mal zdravotné problémy a nízku sebadôveru. Maroš mi vytvoril tréningový a stravovací plán, ktorý som dokázal dodržiavať aj popri náročnej práci. Jeho prístup bol profesionálny, ale zároveň ľudský. Pochopil moje obmedzenia a pomohol mi prekonať všetky prekážky. Dnes mám 88 kg, žiadne zdravotné problémy a konečne sa cítim dobre vo svojom tele."
+                  &quot;Moja práca v IT sektore znamenala sedavý životný štýl a nezdravé stravovacie návyky. S váhou 130 kg som mal zdravotné problémy a nízku sebadôveru. Maroš mi vytvoril tréningový a stravovací plán, ktorý som dokázal dodržiavať aj popri náročnej práci. Jeho prístup bol profesionálny, ale zároveň ľudský. Pochopil moje obmedzenia a pomohol mi prekonať všetky prekážky. Dnes mám 88 kg, žiadne zdravotné problémy a konečne sa cítim dobre vo svojom tele.&quot;
                 </p>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start">
@@ -218,7 +218,7 @@ export default function ExtremnePremenPage() {
             <div>
               <h3 className="text-xl font-bold mb-2 text-white">Budem musieť držať prísnu diétu?</h3>
               <p className="text-gray-300">
-                Nejde o "diétu" v tradičnom zmysle, ale o zmenu stravovacích návykov. Naučím vás, ako sa stravovať zdravo a vyvážene bez pocitu obmedzenia. Plán bude zahŕňať aj vaše obľúbené jedlá, len v upravenej forme a množstve.
+                Nejde o &quot;diétu&quot; v tradičnom zmysle, ale o zmenu stravovacích návykov. Naučím vás, ako sa stravovať zdravo a vyvážene bez pocitu obmedzenia. Plán bude zahŕňať aj vaše obľúbené jedlá, len v upravenej forme a množstve.
               </p>
             </div>
             

@@ -65,7 +65,7 @@ export default function SectionReveal({
       controls.start(getInitialValue());
       setHasAnimated(false);
     }
-  }, [isInView, controls, once, hasAnimated]);
+  }, [isInView, controls, once, hasAnimated, getInitialValue, getTargetValue]);
 
   return (
     <motion.div

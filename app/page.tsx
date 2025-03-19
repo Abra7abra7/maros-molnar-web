@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Hero from "@/components/sections/hero";
 import AboutSection from "@/components/sections/about-section";
-import ServicesOverview from "@/components/sections/services-overview";
+
 import Testimonials from "@/components/sections/testimonials";
-import { Dumbbell, Activity } from "lucide-react";
+
 import SectionReveal from "@/components/animations/section-reveal";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ParallaxEffect from "@/components/animations/parallax-effect";

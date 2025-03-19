@@ -97,7 +97,7 @@ export default function AnimatedButton({
   return (
     <button
       type={type}
-      onClick={(e) => {
+      onClick={() => {
         if (disabled) return;
         if (onClick) onClick();
       }}

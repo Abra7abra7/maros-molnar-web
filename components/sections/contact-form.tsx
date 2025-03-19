@@ -19,21 +19,12 @@ export default function ContactForm() {
     success?: boolean;
     message?: string;
   }>({});
-  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleFocus = (name: string) => {
-    setFocusedField(name);
-  };
-
-  const handleBlur = () => {
-    setFocusedField(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -73,7 +64,7 @@ export default function ContactForm() {
         success: false,
         message: error instanceof Error 
           ? error.message 
-          : "Nastala chyba pri odosielaní správy. Prosím, skúste to znovo neskôr.",
+          : "Nastala chyba pri odosielaní správy. Prosím, skúste to znovu neskôr.",
       });
     } finally {
       setIsSubmitting(false);
@@ -155,8 +146,6 @@ export default function ContactForm() {
                   name={field.id}
                   value={formData[field.id as keyof typeof formData]}
                   onChange={handleChange}
-                  onFocus={() => handleFocus(field.id)}
-                  onBlur={handleBlur}
                   required={field.required}
                   placeholder={field.placeholder}
                   rows={field.rows}
@@ -169,8 +158,6 @@ export default function ContactForm() {
                   type={field.type}
                   value={formData[field.id as keyof typeof formData]}
                   onChange={handleChange}
-                  onFocus={() => handleFocus(field.id)}
-                  onBlur={handleBlur}
                   required={field.required}
                   placeholder={field.placeholder}
                   className={`mt-1 w-full bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-red-500 focus:ring-red-500 transition-all`}

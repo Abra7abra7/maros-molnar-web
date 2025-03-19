@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+
 import { services } from "@/lib/constants";
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionReveal from "@/components/animations/section-reveal";
 import ParallaxEffect from "@/components/animations/parallax-effect";

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/animations/section-reveal";
-import ParallaxEffect from "@/components/animations/parallax-effect";
+
 import ScrollProgress from "@/components/ui/scroll-progress";
 
 export const metadata: Metadata = {
@@ -294,7 +294,7 @@ export default function ProfessionalAthletesPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 italic">
-                  "Maroš mi pomohol zotaviť sa po vážnom zranení ramena, ktoré ohrozovalo moju kariéru. Jeho prístup k rehabilitácii a následnej kondičnej príprave bol kľúčový pre môj návrat na ľad. Teraz som silnejší a výkonnejší než predtým."
+                  &quot;Maroš mi pomohol zotaviť sa po vážnom zranení ramena, ktoré ohrozovalo moju kariéru. Jeho prístup k rehabilitácii a následnej kondičnej príprave bol kľúčový pre môj návrat na ľad. Teraz som silnejší a výkonnejší než predtým.&quot;
                 </p>
               </div>
             </SectionReveal>
@@ -317,7 +317,7 @@ export default function ProfessionalAthletesPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 italic">
-                  "Spolupráca s Marošom mi pomohla výrazne zlepšiť moju výbušnosť a vytrvalosť. Jeho tréningové metódy sú inovatívne a prispôsobené presne mojim potrebám. Oceňujem jeho profesionalitu a komplexný prístup k tréningu."
+                  &quot;Spolupráca s Marošom mi pomohla výrazne zlepšiť moju výbušnosť a vytrvalosť. Jeho tréningové metódy sú inovatívne a prispôsobené presne mojim potrebám. Oceňujem jeho profesionalitu a komplexný prístup k tréningu.&quot;
                 </p>
               </div>
             </SectionReveal>
@@ -340,7 +340,7 @@ export default function ProfessionalAthletesPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 italic">
-                  "Maroš mi pomohol vyriešiť chronické problémy s lakťom, ktoré ma trápili roky. Jeho kombinácia fyzioterapie a cieleného posilňovania mi umožnila hrať bez bolesti a zlepšiť môj výkon na kurte. Odporúčam ho každému športovcovi."
+                  &quot;Maroš mi pomohol vyriešiť chronické problémy s lakťom, ktoré ma trápili roky. Jeho kombinácia fyzioterapie a cieleného posilňovania mi umožnila hrať bez bolesti a zlepšiť môj výkon na kurte. Odporúčam ho každému športovcovi.&quot;
                 </p>
               </div>
             </SectionReveal>

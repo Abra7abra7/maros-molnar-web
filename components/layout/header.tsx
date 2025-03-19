@@ -12,7 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 

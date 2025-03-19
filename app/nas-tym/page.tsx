@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import SectionReveal from "@/components/animations/section-reveal";
-import ParallaxEffect from "@/components/animations/parallax-effect";
+
 import ScrollProgress from "@/components/ui/scroll-progress";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 

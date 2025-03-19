@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { siteConfig } from "@/lib/constants";
+
 import SectionReveal from "@/components/animations/section-reveal";
 import ParallaxEffect from "@/components/animations/parallax-effect";
 import ScrollProgress from "@/components/ui/scroll-progress";
