@@ -17,9 +17,9 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-black">
       <h1 className="text-4xl md:text-6xl font-bold text-red-600 mb-6">Ups! Niečo sa pokazilo</h1>
-      <p className="text-xl text-gray-600 max-w-md mb-8">
+      <p className="text-xl text-gray-300 max-w-md mb-8">
         Ľutujeme, ale vyskytla sa neočakávaná chyba. Skúste stránku obnoviť alebo sa vráťte na domovskú stránku.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
@@ -27,6 +27,7 @@ export default function Error({
           onClick={reset}
           variant="outline"
           size="lg"
+          className="border-gray-700 text-white hover:bg-gray-800"
         >
           Skúsiť znova
         </Button>

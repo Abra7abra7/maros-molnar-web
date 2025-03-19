@@ -4,6 +4,12 @@ import Link from "next/link";
 import { services } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import SectionReveal from "@/components/animations/section-reveal";
+import ParallaxEffect from "@/components/animations/parallax-effect";
+import ScrollProgress from "@/components/ui/scroll-progress";
+import AnimatedButton from "@/components/ui/animated-button";
+import ServiceCard from "@/components/ui/service-card";
+import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Služby",
@@ -13,178 +19,222 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <ScrollProgress showPercentage />
+      
       {/* Hero Section */}
-      <section className="relative py-24 bg-black text-white">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
-        />
+      <section className="relative py-24 bg-black text-white overflow-hidden">
+        <ParallaxEffect speed={-0.3} className="absolute inset-0">
+          <div 
+            className="w-full h-[120%] bg-cover bg-center opacity-30"
+            style={{ backgroundImage: "url('/images/services-bg.jpg')" }}
+          />
+        </ParallaxEffect>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Moje služby</h1>
-            <p className="text-xl text-gray-300">
-              Ponúkam profesionálne služby v oblasti fitness tréningu a fyzioterapie. Každý klient je pre mňa jedinečný a vyžaduje individuálny prístup.
-            </p>
-          </div>
+          <SectionReveal>
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Moje služby</h1>
+              <p className="text-xl text-gray-300">
+                Ponúkam profesionálne služby v oblasti fitness tréningu a fyzioterapie. Každý klient je pre mňa jedinečný a vyžaduje individuálny prístup.
+              </p>
+            </div>
+          </SectionReveal>
         </div>
       </section>
 
       {/* Services Overview */}
-      <section className="py-16">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Fitness Training */}
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-              <div className="relative h-80">
-                <Image
-                  src="/images/fitness-service.jpg"
-                  alt="Fitness tréning"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h2 className="text-3xl font-bold mb-4">{services.fitness.title}</h2>
-                <p className="text-gray-700 mb-6">
-                  {services.fitness.description}
-                </p>
-                <div className="space-y-4 mb-8">
-                  {services.fitness.features.slice(0, 3).map((feature, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-red-600 text-white p-1 rounded-full mr-3 mt-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">{feature.title}</h3>
-                        <p className="text-sm text-gray-600">{feature.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <Link href="/sluzby/fitness">
-                  <Button variant="red" className="w-full">
-                    Viac informácií
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            <SectionReveal direction="left">
+              <ServiceCard
+                title={services.fitness.title}
+                description={services.fitness.description}
+                imageSrc="/images/fitness-service.jpg"
+                href="/sluzby/fitness"
+                className="h-full"
+              />
+            </SectionReveal>
             
             {/* Physiotherapy */}
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-              <div className="relative h-80">
-                <Image
-                  src="/images/physio-service.jpg"
-                  alt="Fyzioterapia"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8">
-                <h2 className="text-3xl font-bold mb-4">{services.physio.title}</h2>
-                <p className="text-gray-700 mb-6">
-                  {services.physio.description}
-                </p>
-                <div className="space-y-4 mb-8">
-                  {services.physio.features.slice(0, 3).map((feature, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-red-600 text-white p-1 rounded-full mr-3 mt-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">{feature.title}</h3>
-                        <p className="text-sm text-gray-600">{feature.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <Link href="/sluzby/fyzioterapia">
-                  <Button variant="red" className="w-full">
-                    Viac informácií
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            <SectionReveal direction="right">
+              <ServiceCard
+                title={services.physio.title}
+                description={services.physio.description}
+                imageSrc="/images/physio-service.jpg"
+                href="/sluzby/fyzioterapia"
+                className="h-full"
+              />
+            </SectionReveal>
+            
+            {/* Extreme Transformations */}
+            <SectionReveal direction="up">
+              <ServiceCard
+                title={services.transformation.title}
+                description={services.transformation.description}
+                imageSrc="/images/transformation-service.jpg"
+                href="/sluzby/extremne-premeny"
+                className="h-full"
+              />
+            </SectionReveal>
+            
+            {/* Professional Athletes */}
+            <SectionReveal direction="down">
+              <ServiceCard
+                title={services.athletes.title}
+                description={services.athletes.description}
+                imageSrc="/images/athletes-service.jpg"
+                href="/sluzby/profesionalni-sportovci"
+                className="h-full"
+              />
+            </SectionReveal>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Cenník služieb</h2>
+          <SectionReveal>
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">Cenník služieb</h2>
+          </SectionReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Fitness Pricing */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-center">Fitness tréning</h3>
-              <div className="space-y-4">
-                {services.fitness.features.map((feature, index) => (
-                  <Card key={index} className="border-none shadow-md">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">{feature.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="py-2">
-                      <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                    </CardContent>
-                    <CardFooter className="pt-2">
-                      <CardDescription>{feature.description}</CardDescription>
-                    </CardFooter>
-                  </Card>
-                ))}
+            <SectionReveal direction="up" delay={0.1}>
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">Fitness tréning</h3>
+                <div className="space-y-4">
+                  {services.fitness.features.map((feature, index) => (
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="py-2">
+                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
+                      </CardContent>
+                      <CardFooter className="pt-2">
+                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
-            
-            {/* Divider for desktop */}
-            <div className="hidden lg:block">
-              <div className="h-full w-px bg-gray-300 mx-auto"></div>
-            </div>
-            
-            {/* Divider for mobile/tablet */}
-            <div className="block lg:hidden h-px w-full bg-gray-300 my-8 md:col-span-2"></div>
+            </SectionReveal>
             
             {/* Physiotherapy Pricing */}
-            <div className="md:col-span-2 lg:col-span-1">
-              <h3 className="text-2xl font-bold mb-6 text-center">Fyzioterapia</h3>
-              <div className="space-y-4">
-                {services.physio.features.map((feature, index) => (
-                  <Card key={index} className="border-none shadow-md">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">{feature.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="py-2">
-                      <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                    </CardContent>
-                    <CardFooter className="pt-2">
-                      <CardDescription>{feature.description}</CardDescription>
-                    </CardFooter>
-                  </Card>
-                ))}
+            <SectionReveal direction="up" delay={0.2}>
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">Fyzioterapia</h3>
+                <div className="space-y-4">
+                  {services.physio.features.map((feature, index) => (
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="py-2">
+                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
+                      </CardContent>
+                      <CardFooter className="pt-2">
+                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
+            </SectionReveal>
+            
+            {/* Transformation Pricing */}
+            <SectionReveal direction="up" delay={0.3}>
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">Extrémne Premeny</h3>
+                <div className="space-y-4">
+                  {services.transformation.features.map((feature, index) => (
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="py-2">
+                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
+                      </CardContent>
+                      <CardFooter className="pt-2">
+                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </SectionReveal>
+            
+            {/* Professional Athletes Pricing */}
+            <SectionReveal direction="up" delay={0.4}>
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">Profesionálni športovci</h3>
+                <div className="space-y-4">
+                  {services.athletes.features.map((feature, index) => (
+                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="py-2">
+                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
+                      </CardContent>
+                      <CardFooter className="pt-2">
+                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
+                      </CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <SectionReveal>
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">Prečo si vybrať moje služby?</h2>
+          </SectionReveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Individuálny prístup",
+                description: "Každý tréningový a rehabilitačný plán je vytvorený na mieru podľa vašich potrieb a cieľov."
+              },
+              {
+                title: "Odborné znalosti",
+                description: "Mám viac ako 10 rokov skúseností v oblasti fitness tréningu a fyzioterapie."
+              },
+              {
+                title: "Moderné metódy",
+                description: "Využívam najnovšie metódy a techniky pre dosiahnutie najlepších výsledkov."
+              },
+              {
+                title: "Flexibilný rozvrh",
+                description: "Tréningy a terapie si môžete naplánovať podľa vášho časového harmonogramu."
+              },
+              {
+                title: "Pravidelné sledovanie pokroku",
+                description: "Pravidelne vyhodnocujeme váš pokrok a upravujeme plán podľa potreby."
+              },
+              {
+                title: "Dlhodobé výsledky",
+                description: "Zameranie na dlhodobé zlepšenie kondície a zdravia, nie len krátkodobé riešenia."
+              }
+            ].map((feature, index) => (
+              <SectionReveal key={index} direction="up" delay={0.1 * index}>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-red-600 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center mb-4">
+                    <Check size={20} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              </SectionReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -192,15 +242,15 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-black text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">Pripravený začať?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Kontaktujte ma a dohodneme si úvodnú konzultáciu, počas ktorej preberieme vaše ciele a možnosti spolupráce.
-          </p>
-          <Link href="/kontakt">
-            <Button variant="red" size="lg">
+          <SectionReveal>
+            <h2 className="text-3xl font-bold mb-6">Pripravený začať?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Kontaktujte ma a dohodneme si úvodnú konzultáciu, počas ktorej preberieme vaše ciele a možnosti spolupráce.
+            </p>
+            <AnimatedButton href="/kontakt" variant="primary" size="lg">
               Kontaktujte ma
-            </Button>
-          </Link>
+            </AnimatedButton>
+          </SectionReveal>
         </div>
       </section>
     </>

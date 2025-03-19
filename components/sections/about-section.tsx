@@ -31,8 +31,8 @@ export default function AboutSection({
           </div>
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-            <div className="text-gray-700 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">{title}</h2>
+            <div className="text-gray-300 space-y-4">
               {description.split('\n\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

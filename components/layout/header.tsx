@@ -48,11 +48,14 @@ export default function Header() {
               {navLinks.map((link) =>
                 link.children ? (
                   <NavigationMenuItem key={link.href}>
-                    <NavigationMenuTrigger className="text-white hover:text-red-500">
+                    <NavigationMenuTrigger 
+                      className="text-white hover:text-red-500 hover:bg-transparent focus:bg-transparent bg-transparent"
+                      onClick={() => window.location.href = link.href}
+                    >
                       {link.title}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                      <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 bg-black/90">
                         {link.children.map((child) => (
                           <li key={child.href}>
                             <NavigationMenuLink asChild>
@@ -60,10 +63,10 @@ export default function Header() {
                                 href={child.href}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-red-500 hover:text-white focus:bg-red-500 focus:text-white"
                               >
-                                <div className="text-sm font-medium leading-none">
+                                <div className="text-sm font-medium leading-none text-white">
                                   {child.title}
                                 </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                <p className="line-clamp-2 text-sm leading-snug text-gray-300">
                                   {child.description}
                                 </p>
                               </Link>
@@ -77,10 +80,7 @@ export default function Header() {
                   <NavigationMenuItem key={link.href}>
                     <Link
                       href={link.href}
-                      className={cn(
-                        navigationMenuTriggerStyle(),
-                        "text-white hover:text-red-500 hover:bg-transparent focus:bg-transparent"
-                      )}
+                      className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:text-red-500 hover:bg-transparent focus:bg-transparent bg-transparent"
                     >
                       {link.title}
                     </Link>
@@ -112,7 +112,13 @@ export default function Header() {
               <div key={link.href}>
                 {link.children ? (
                   <div className="space-y-2">
-                    <p className="font-medium text-red-500">{link.title}</p>
+                    <Link
+                      href={link.href}
+                      className="block font-medium text-red-500 hover:text-red-400"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.title}
+                    </Link>
                     <div className="pl-4 space-y-2">
                       {link.children.map((child) => (
                         <Link

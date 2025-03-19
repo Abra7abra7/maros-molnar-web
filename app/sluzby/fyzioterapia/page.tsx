@@ -17,7 +17,7 @@ export default function PhysioPage() {
       <section className="relative py-24 bg-black text-white">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/physio-bg.jpg')" }}
+          style={{ backgroundImage: "url('/images/services/physiotherapy-1.jpg')" }}
         />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
@@ -30,16 +30,16 @@ export default function PhysioPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Moje služby</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Moje služby</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.physio.features.map((feature, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 text-white">
                 <CardHeader>
                   <CardTitle>{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardDescription className="text-gray-300">{feature.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-2xl font-bold text-red-600">{feature.price}</p>
@@ -58,91 +58,81 @@ export default function PhysioPage() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-bold mb-6">Môj prístup k fyzioterapii</h2>
-              <div className="space-y-4 text-gray-700">
-                <p>
-                  Ako fyzioterapeut sa zameriavam na komplexnú diagnostiku a liečbu pohybového aparátu. Každého klienta vnímam ako jedinečnú osobnosť s individuálnymi potrebami a problémami.
-                </p>
-                <p>
-                  Pri prvom stretnutí vykonám dôkladné vyšetrenie, ktoré zahŕňa analýzu držania tela, pohybových stereotypov a funkčných testov. Na základe výsledkov vytvorím individuálny rehabilitačný plán.
-                </p>
-                <p>
-                  Využívam kombináciu manuálnych techník, cvičení a edukácie pacienta. Mojím cieľom nie je len odstrániť aktuálne ťažkosti, ale aj identifikovať a riešiť ich príčinu, aby sa problémy neopakovali.
-                </p>
-              </div>
-            </div>
-            
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/physio-approach.jpg"
+                src="/images/services/physiotherapy-2.jpg"
                 alt="Fyzioterapia"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-white">Môj prístup k fyzioterapii</h2>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  Môj prístup k fyzioterapii je založený na dôkladnej diagnostike a individuálnom prístupe ku každému pacientovi. Verím, že každý človek je jedinečný a vyžaduje personalizovanú liečbu.
+                </p>
+                <p>
+                  Pred začiatkom terapie vykonávam komplexné vyšetrenie, ktoré zahŕňa analýzu držania tela, rozsahu pohybu, svalovej sily a ďalších faktorov. Na základe týchto informácií vytvorím liečebný plán, ktorý je prispôsobený vašim potrebám.
+                </p>
+                <p>
+                  Počas terapie kombinujem rôzne techniky, vrátane manuálnej terapie, cvičení a edukácie pacienta, aby som dosiahol najlepšie výsledky.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Specializations Section */}
-      <section className="py-16">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Moje špecializácie</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Moje špecializácie</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Liečba bolesti chrbta</h3>
-              <p className="text-gray-700">
-                Špecializujem sa na diagnostiku a liečbu bolestí chrbta, vrátane problémov s platničkami, svalovou dysbalanciou a poruchami držania tela.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Športová rehabilitácia</h3>
-              <p className="text-gray-700">
-                Pomáham športovcom po zraneniach vrátiť sa späť k ich aktivitám. Zameriavam sa na obnovu funkcie, sily a prevenciu opakovaných zranení.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Manuálna terapia</h3>
-              <p className="text-gray-700">
-                Využívam rôzne techniky manuálnej terapie na uvoľnenie svalového napätia, zlepšenie kĺbovej pohyblivosti a zmiernenie bolesti.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Pooperačná rehabilitácia</h3>
-              <p className="text-gray-700">
-                Pomáham klientom po operáciách pohybového aparátu obnoviť funkciu, silu a pohyblivosť prostredníctvom cielenej rehabilitácie.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Neurologická rehabilitácia</h3>
-              <p className="text-gray-700">
-                Pracujem s klientmi s neurologickými problémami na zlepšení ich pohybových schopností, koordinácie a celkovej kvality života.
-              </p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Prevencia zranení</h3>
-              <p className="text-gray-700">
-                Navrhujem preventívne programy na predchádzanie zraneniam, najmä pre športovcov a ľudí s náročným povolaním.
-              </p>
-            </div>
+            {[
+              {
+                title: "Liečba bolesti chrbta",
+                description: "Špecializujem sa na diagnostiku a liečbu bolestí chrbta, vrátane problémov s platničkami, svalovou dysbalanciou a poruchami držania tela."
+              },
+              {
+                title: "Športová rehabilitácia",
+                description: "Pomáham športovcom po zraneniach vrátiť sa späť k ich aktivitám. Zameriavam sa na obnovu funkcie, sily a prevenciu opakovaných zranení."
+              },
+              {
+                title: "Manuálna terapia",
+                description: "Využívam rôzne techniky manuálnej terapie na uvoľnenie svalového napätia, zlepšenie kĺbovej pohyblivosti a zmiernenie bolesti."
+              },
+              {
+                title: "Pooperačná rehabilitácia",
+                description: "Pomáham klientom po operáciách pohybového aparátu obnoviť funkciu, silu a pohyblivosť prostredníctvom cielenej rehabilitácie."
+              },
+              {
+                title: "Neurologická rehabilitácia",
+                description: "Pracujem s klientmi s neurologickými problémami na zlepšení ich pohybových schopností, koordinácie a celkovej kvality života."
+              },
+              {
+                title: "Prevencia zranení",
+                description: "Navrhujem preventívne programy na predchádzanie zraneniam, najmä pre športovcov a ľudí s náročným povolaním."
+              }
+            ].map((condition, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700">
+                <h3 className="text-xl font-bold mb-3 text-white">{condition.title}</h3>
+                <p className="text-gray-300">{condition.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Ako prebieha terapia</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Ako prebieha terapia</h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="relative">
@@ -154,8 +144,8 @@ export default function PhysioPage() {
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="md:text-right md:pr-12">
                     <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
-                    <h3 className="text-xl font-bold mb-2">1. Úvodná konzultácia</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-bold mb-2 text-white">1. Úvodná konzultácia</h3>
+                    <p className="text-gray-300">
                       Počas prvého stretnutia sa zoznámime s vašimi problémami, zdravotnou históriou a očakávaniami. Vykonám komplexné vyšetrenie na identifikáciu príčin vašich ťažkostí.
                     </p>
                   </div>
@@ -167,8 +157,8 @@ export default function PhysioPage() {
                   <div className="md:hidden"></div>
                   <div className="md:pl-12">
                     <div className="hidden md:block absolute left-0 top-5 w-3 h-3 rounded-full bg-red-600 transform -translate-x-1.5"></div>
-                    <h3 className="text-xl font-bold mb-2">2. Stanovenie plánu</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-bold mb-2 text-white">2. Stanovenie plánu</h3>
+                    <p className="text-gray-300">
                       Na základe výsledkov vyšetrenia vytvorím individuálny rehabilitačný plán, ktorý zahŕňa manuálne techniky, cvičenia a odporúčania pre domácu starostlivosť.
                     </p>
                   </div>
@@ -178,8 +168,8 @@ export default function PhysioPage() {
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="md:text-right md:pr-12">
                     <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
-                    <h3 className="text-xl font-bold mb-2">3. Terapeutické sedenia</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-bold mb-2 text-white">3. Terapeutické sedenia</h3>
+                    <p className="text-gray-300">
                       Počas terapeutických sedení využívam rôzne techniky na zmiernenie vašich ťažkostí a zlepšenie funkcie. Každé sedenie je prispôsobené vašim aktuálnym potrebám a pokroku.
                     </p>
                   </div>
@@ -191,8 +181,8 @@ export default function PhysioPage() {
                   <div className="md:hidden"></div>
                   <div className="md:pl-12">
                     <div className="hidden md:block absolute left-0 top-5 w-3 h-3 rounded-full bg-red-600 transform -translate-x-1.5"></div>
-                    <h3 className="text-xl font-bold mb-2">4. Domáce cvičenia</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-bold mb-2 text-white">4. Domáce cvičenia</h3>
+                    <p className="text-gray-300">
                       Dôležitou súčasťou terapie sú domáce cvičenia, ktoré vám pomôžu udržať a zlepšiť výsledky dosiahnuté počas terapeutických sedení. Poskytujem jasné inštrukcie a demonštrácie cvikov.
                     </p>
                   </div>
@@ -202,8 +192,8 @@ export default function PhysioPage() {
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="md:text-right md:pr-12">
                     <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
-                    <h3 className="text-xl font-bold mb-2">5. Sledovanie pokroku</h3>
-                    <p className="text-gray-700">
+                    <h3 className="text-xl font-bold mb-2 text-white">5. Sledovanie pokroku</h3>
+                    <p className="text-gray-300">
                       Pravidelne hodnotíme váš pokrok a podľa potreby upravujeme terapeutický plán. Cieľom je nielen zbaviť vás aktuálnych ťažkostí, ale aj predchádzať ich návratu v budúcnosti.
                     </p>
                   </div>
@@ -219,8 +209,8 @@ export default function PhysioPage() {
       {/* CTA Section */}
       <section className="py-16 bg-black text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">Potrebujete fyzioterapiu?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-white">Potrebujete fyzioterapiu?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
             Neodkladajte riešenie vašich zdravotných problémov. Kontaktujte ma a spoločne nájdeme cestu k vášmu zotaveniu a lepšej kvalite života.
           </p>
           <Link href="/kontakt">

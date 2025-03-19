@@ -34,6 +34,16 @@ export const navLinks = [
         href: "/sluzby/fyzioterapia",
         description: "Odborná fyzioterapia a rehabilitácia",
       },
+      {
+        title: "Extrémne Premeny",
+        href: "/sluzby/extremne-premeny",
+        description: "Príbehy úspešných klientov a ich transformácie",
+      },
+      {
+        title: "Profesionálni športovci",
+        href: "/sluzby/profesionalni-sportovci",
+        description: "Spolupráca s vrcholovými športovcami z rôznych disciplín",
+      },
     ],
   },
   {
@@ -82,6 +92,48 @@ export const services = {
         title: "Manuálna terapia",
         description: "Špecializované techniky manuálnej terapie",
         price: "40€ / hodina",
+      },
+    ],
+  },
+  transformation: {
+    title: "Extrémne Premeny",
+    description: "Príbehy úspešných klientov a ich transformácie",
+    features: [
+      {
+        title: "Komplexný program",
+        description: "Individuálny tréningový a stravovací plán s pravidelným sledovaním pokroku",
+        price: "od 150€ / mesiac",
+      },
+      {
+        title: "Konzultácia",
+        description: "Úvodné zhodnotenie a nastavenie realistických cieľov",
+        price: "50€",
+      },
+      {
+        title: "Podpora skupiny",
+        description: "Skupinové tréningy a vzájomná motivácia",
+        price: "od 80€ / mesiac",
+      },
+    ],
+  },
+  athletes: {
+    title: "Profesionálni športovci",
+    description: "Spolupráca s vrcholovými športovcami z rôznych disciplín",
+    features: [
+      {
+        title: "Výkonnostný tréning",
+        description: "Individuálne navrhnuté tréningové programy zamerané na zlepšenie špecifických aspektov výkonu",
+        price: "od 80€ / hodina",
+      },
+      {
+        title: "Prevencia zranení",
+        description: "Komplexné programy zamerané na identifikáciu a nápravu svalových dysbalancií",
+        price: "od 70€ / hodina",
+      },
+      {
+        title: "Športová rehabilitácia",
+        description: "Špecializovaná rehabilitácia po zraneniach zameraná na rýchly a bezpečný návrat k športu",
+        price: "od 75€ / hodina",
       },
     ],
   },
