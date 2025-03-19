@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 interface SectionRevealProps {
@@ -26,7 +26,7 @@ export default function SectionReveal({
   const [hasAnimated, setHasAnimated] = useState(false);
 
   // Set initial animation values based on direction
-  const getInitialValue = () => {
+  const getInitialValue = useCallback(() => {
     switch (direction) {
       case "up":
         return { opacity: 0, y: 50 };
@@ -39,10 +39,10 @@ export default function SectionReveal({
       default:
         return { opacity: 0, y: 50 };
     }
-  };
+  }, [direction]);
 
   // Set animation target values
-  const getTargetValue = () => {
+  const getTargetValue = useCallback(() => {
     switch (direction) {
       case "up":
       case "down":
@@ -53,7 +53,7 @@ export default function SectionReveal({
       default:
         return { opacity: 1, y: 0 };
     }
-  };
+  }, [direction]);
 
   useEffect(() => {
     if (isInView && !hasAnimated) {
