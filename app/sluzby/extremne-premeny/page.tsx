@@ -13,14 +13,16 @@ export default function ExtremnePremenPage() {
     <main className="pt-16">
       {/* Hero Section */}
       <section className="relative bg-black text-white py-20 md:py-32">
-        <div className="absolute inset-0 z-0 opacity-30">
-          <Image
-            src="/images/transformation-hero.jpg"
-            alt="Extrémne premeny"
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="absolute inset-0 z-0 opacity-30 overflow-hidden">
+          <div className="relative w-full h-[130%] -mt-20">
+            <Image
+              src="/images/transformation-hero.jpg"
+              alt="Extrémne premeny"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
@@ -57,18 +59,19 @@ export default function ExtremnePremenPage() {
           {/* Story 1 */}
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/pred-po-1.jpeg"
                   alt="Michal - pred a po"
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-white">Michal, -35 kg za 10 mesiacov</h3>
                 <p className="text-gray-300 mb-6">
-                  "Celý život som bojoval s nadváhou, ale nikdy som nemal dostatok motivácie a správne vedenie. Keď som stretol Maroša, všetko sa zmenilo. Jeho individuálny prístup, odborné znalosti a neustála podpora mi pomohli nielen schudnúť, ale aj zmeniť svoj životný štýl. Dnes sa cítim zdravší, silnejší a plný energie."
+                  "Celý život som bojoval s nadváhou, ale nikdy som nemal dostatok motivácie a správne vedenia. Keď som stretol Maroša, všetko sa zmenilo. Jeho individuálny prístup, odborné znalosti a neustála podpora mi pomohli nielen schudnúť, ale aj zmeniť svoj životný štýl. Dnes sa cítim zdravší, silnejší a plný energie."
                 </p>
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-start">
@@ -91,12 +94,13 @@ export default function ExtremnePremenPage() {
           {/* Story 2 */}
           <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
-              <div className="md:order-2 relative aspect-[4/3] rounded-lg overflow-hidden">
+              <div className="md:order-2 relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/pred-po-2.jpeg"
                   alt="Jana - pred a po"
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div className="md:order-1">
@@ -125,12 +129,13 @@ export default function ExtremnePremenPage() {
           {/* Story 3 */}
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              <div className="relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/pred-po-3.jpeg"
                   alt="Peter - pred a po"
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div>
@@ -165,28 +170,28 @@ export default function ExtremnePremenPage() {
             <h2 className="text-3xl font-bold mb-8 text-center text-white">Môj prístup k extrémnym premenám</h2>
             
             <div className="space-y-8">
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <h3 className="text-xl font-bold mb-4 text-white">1. Individuálny prístup</h3>
                 <p className="text-gray-300">
                   Každý človek je jedinečný, preto vytváram tréningové a stravovacie plány na mieru podľa vašich potrieb, možností a cieľov. Neexistuje univerzálny recept na úspech - to, čo funguje pre jedného, nemusí fungovať pre druhého.
                 </p>
               </div>
               
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <h3 className="text-xl font-bold mb-4 text-white">2. Postupné zmeny</h3>
                 <p className="text-gray-300">
                   Verím v postupné a udržateľné zmeny. Radikálne diéty a extrémne tréningy môžu priniesť rýchle výsledky, ale tie sú často dočasné a môžu poškodiť vaše zdravie. Mojím cieľom je pomôcť vám vybudovať zdravé návyky, ktoré vydržia celý život.
                 </p>
               </div>
               
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <h3 className="text-xl font-bold mb-4 text-white">3. Komplexný prístup</h3>
                 <p className="text-gray-300">
                   Skutočná transformácia zahŕňa viac než len cvičenie a diétu. Pracujeme aj na vašom spánkovom režime, manažmente stresu a celkovom životnom štýle. Len komplexný prístup prinesie trvalé výsledky.
                 </p>
               </div>
               
-              <div className="bg-gray-900 p-6 rounded-lg">
+              <div className="bg-black p-6 rounded-lg border border-gray-800">
                 <h3 className="text-xl font-bold mb-4 text-white">4. Neustála podpora</h3>
                 <p className="text-gray-300">
                   Na ceste za vašou premenou nie ste sami. Poskytujem pravidelnú podporu, motiváciu a poradenstvo. Spoločne prekonáme všetky prekážky a dosiahneme vaše ciele.
