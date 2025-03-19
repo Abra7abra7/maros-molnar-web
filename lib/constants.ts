@@ -47,6 +47,10 @@ export const navLinks = [
     ],
   },
   {
+    title: "Náš tím",
+    href: "/nas-tym",
+  },
+  {
     title: "Kontakt",
     href: "/kontakt",
   },
