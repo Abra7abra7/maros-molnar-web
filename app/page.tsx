@@ -63,12 +63,30 @@ export default function Home() {
                   />
                 </SectionReveal>
                 
-                <SectionReveal direction="right" delay={0.4}>
+                <SectionReveal direction="right" delay={0.2}>
                   <ServiceCard
                     title="Fyzioterapia"
                     description="Odborná fyzioterapia a rehabilitácia pre liečbu zranení a zlepšenie pohyblivosti. Individuálny prístup a moderné metódy rehabilitácie."
                     imageSrc="/images/physio-service.jpg"
                     href="/sluzby/fyzioterapia"
+                  />
+                </SectionReveal>
+                
+                <SectionReveal direction="left" delay={0.4}>
+                  <ServiceCard
+                    title="Extrémne Premeny"
+                    description="Príbehy úspešných klientov a ich transformácie. Komplexný program pre tých, ktorí chcú dosiahnuť výraznú zmenu postavy a životného štýlu."
+                    imageSrc="/images/transformation-service.jpg"
+                    href="/sluzby/extremne-premeny"
+                  />
+                </SectionReveal>
+                
+                <SectionReveal direction="right" delay={0.4}>
+                  <ServiceCard
+                    title="Profesionálni športovci"
+                    description="Spolupráca s vrcholovými športovcami z NHL, profesionálnymi futbalistami, tenistami a ďalšími elitami športového sveta."
+                    imageSrc="/images/athletes-service.jpg"
+                    href="/sluzby/profesionalni-sportovci"
                   />
                 </SectionReveal>
               </div>
