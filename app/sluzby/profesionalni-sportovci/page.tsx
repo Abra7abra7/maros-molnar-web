@@ -71,15 +71,22 @@ export default function ProfessionalAthletesPage() {
             {/* Hockey */}
             <SectionReveal direction="left">
               <div className="relative">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
+                <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/hockey-athletes.jpg"
+                    src="/images/hockey-athletes.jpeg"
                     alt="Hokejisti"
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:opacity-80 transition-all duration-300"></div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-md">Hokej (NHL)</h3>
+                    <p className="text-gray-100 text-sm md:text-base line-clamp-2 md:line-clamp-3 drop-shadow-md">
+                      Spolupracujem s hokejistami z NHL a európskych líg na zlepšení ich výkonu, rýchlosti a sily.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Hokej (NHL)</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white sr-only">Hokej (NHL)</h3>
                 <p className="text-gray-300 mb-6">
                   Spolupracujem s hokejistami z NHL a európskych líg na zlepšení ich výkonu, rýchlosti a sily. Hokej vyžaduje špecifickú kombináciu explozívnej sily, vytrvalosti a flexibility, ktorú pomáham športovcom rozvíjať prostredníctvom špecializovaných tréningových programov.
                 </p>
@@ -103,15 +110,22 @@ export default function ProfessionalAthletesPage() {
             {/* Football */}
             <SectionReveal direction="right">
               <div className="relative">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
+                <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/football-athletes.jpg"
+                    src="/images/football-athletes.jpeg"
                     alt="Futbalisti"
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:opacity-80 transition-all duration-300"></div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-md">Futbal</h3>
+                    <p className="text-gray-100 text-sm md:text-base line-clamp-2 md:line-clamp-3 drop-shadow-md">
+                      S profesionálnymi futbalistami pracujem na zlepšení ich vytrvalosti, agility a sily dolných končatín.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Futbal</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white sr-only">Futbal</h3>
                 <p className="text-gray-300 mb-6">
                   S profesionálnymi futbalistami pracujem na zlepšení ich vytrvalosti, agility a sily dolných končatín. Futbal vyžaduje komplexnú fyzickú pripravenosť a schopnosť rýchlej regenerácie, čo sú oblasti, na ktoré sa v tréningových programoch zameriavam.
                 </p>
@@ -135,15 +149,22 @@ export default function ProfessionalAthletesPage() {
             {/* Tennis */}
             <SectionReveal direction="left">
               <div className="relative">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
+                <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/tennis-athletes.jpg"
+                    src="/images/tennis-athletes.jpeg"
                     alt="Tenisti"
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:opacity-80 transition-all duration-300"></div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-md">Tenis</h3>
+                    <p className="text-gray-100 text-sm md:text-base line-clamp-2 md:line-clamp-3 drop-shadow-md">
+                      Tenisti potrebujú špecifickú kombináciu výbušnosti, vytrvalosti a stability.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Tenis</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white sr-only">Tenis</h3>
                 <p className="text-gray-300 mb-6">
                   Tenisti potrebujú špecifickú kombináciu výbušnosti, vytrvalosti a stability. Moje tréningové programy pre profesionálnych tenistov sa zameriavajú na rozvoj rotačnej sily, stabilitu ramien a prevenciu zranení, ktoré sú v tenise časté.
                 </p>
@@ -167,15 +188,22 @@ export default function ProfessionalAthletesPage() {
             {/* Basketball/Volleyball */}
             <SectionReveal direction="right">
               <div className="relative">
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
+                <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/basketball-athletes.jpg"
+                    src="/images/basketball-athletes.jpeg"
                     alt="Basketbalisti a volejbalisti"
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent group-hover:opacity-80 transition-all duration-300"></div>
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-md">Basketbal a volejbal</h3>
+                    <p className="text-gray-100 text-sm md:text-base line-clamp-2 md:line-clamp-3 drop-shadow-md">
+                      Basketbalisti a volejbalisti potrebujú výnimočnú vertikálnu výbušnosť, stabilitu a koordináciu.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Basketbal a volejbal</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white sr-only">Basketbal a volejbal</h3>
                 <p className="text-gray-300 mb-6">
                   Basketbalisti a volejbalisti potrebujú výnimočnú vertikálnu výbušnosť, stabilitu a koordináciu. Moje tréningové programy sa zameriavajú na rozvoj výskoku, sily hornej časti tela a prevenciu zranení typických pre tieto športy.
                 </p>
@@ -231,7 +259,7 @@ export default function ProfessionalAthletesPage() {
               <div className="bg-gray-900 p-8 rounded-lg h-full">
                 <h3 className="text-xl font-bold mb-4 text-white">Športová rehabilitácia</h3>
                 <p className="text-gray-300 mb-6">
-                  Špecializovaná rehabilitácia po zraneniach zameraná na rýchly a bezpečný návrat k športovej aktivite. Kombinácia manuálnych techník, cvičení a moderných rehabilitačných metód.
+                  Špecializovaná rehabilitácia po zraneniach zameraná na rýchly a bezpečný návrat k športu. Kombinácia manuálnych techník, cvičení a moderných rehabilitačných metód.
                 </p>
                 <p className="text-xl font-bold text-red-600">od 75€ / hodina</p>
               </div>

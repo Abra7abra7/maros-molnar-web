@@ -58,7 +58,7 @@ export default function FitnessPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">Výhody fitness tréningu</h2>
           
@@ -129,7 +129,7 @@ export default function FitnessPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-1.jpg"
+                src="/images/pred-po-1.jpeg"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -144,7 +144,7 @@ export default function FitnessPage() {
             
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-2.jpg"
+                src="/images/pred-po-2.jpeg"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -159,7 +159,7 @@ export default function FitnessPage() {
             
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-3.jpg"
+                src="/images/pred-po-3.jpeg"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

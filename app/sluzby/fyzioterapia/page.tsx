@@ -58,7 +58,7 @@ export default function PhysioPage() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
@@ -130,75 +130,80 @@ export default function PhysioPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">Ako prebieha terapia</h2>
           
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline */}
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-red-600 transform md:translate-x-px"></div>
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-red-600 transform md:translate-x-px"></div>
               
               {/* Steps */}
               <div className="space-y-12">
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="md:text-right md:pr-12">
-                    <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
+                {/* Step 1 */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="md:text-right md:pr-12 pl-12 md:pl-0 relative">
+                    <div className="hidden md:block absolute right-0 top-5 w-4 h-4 rounded-full bg-red-600 transform translate-x-2 border-2 border-red-700"></div>
+                    <div className="md:hidden absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
                     <h3 className="text-xl font-bold mb-2 text-white">1. Úvodná konzultácia</h3>
                     <p className="text-gray-300">
                       Počas prvého stretnutia sa zoznámime s vašimi problémami, zdravotnou históriou a očakávaniami. Vykonám komplexné vyšetrenie na identifikáciu príčin vašich ťažkostí.
                     </p>
                   </div>
-                  <div className="md:hidden w-3 h-3 rounded-full bg-red-600 absolute left-0 top-5"></div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
                 
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="md:hidden"></div>
-                  <div className="md:pl-12">
-                    <div className="hidden md:block absolute left-0 top-5 w-3 h-3 rounded-full bg-red-600 transform -translate-x-1.5"></div>
+                {/* Step 2 */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="hidden md:block"></div>
+                  <div className="md:pl-12 pl-12 relative">
+                    <div className="hidden md:block absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
+                    <div className="md:hidden absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
                     <h3 className="text-xl font-bold mb-2 text-white">2. Stanovenie plánu</h3>
                     <p className="text-gray-300">
                       Na základe výsledkov vyšetrenia vytvorím individuálny rehabilitačný plán, ktorý zahŕňa manuálne techniky, cvičenia a odporúčania pre domácu starostlivosť.
                     </p>
                   </div>
-                  <div className="md:hidden w-3 h-3 rounded-full bg-red-600 absolute left-0 top-5"></div>
                 </div>
                 
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="md:text-right md:pr-12">
-                    <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
+                {/* Step 3 */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="md:text-right md:pr-12 pl-12 md:pl-0 relative">
+                    <div className="hidden md:block absolute right-0 top-5 w-4 h-4 rounded-full bg-red-600 transform translate-x-2 border-2 border-red-700"></div>
+                    <div className="md:hidden absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
                     <h3 className="text-xl font-bold mb-2 text-white">3. Terapeutické sedenia</h3>
                     <p className="text-gray-300">
                       Počas terapeutických sedení využívam rôzne techniky na zmiernenie vašich ťažkostí a zlepšenie funkcie. Každé sedenie je prispôsobené vašim aktuálnym potrebám a pokroku.
                     </p>
                   </div>
-                  <div className="md:hidden w-3 h-3 rounded-full bg-red-600 absolute left-0 top-5"></div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
                 
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="md:hidden"></div>
-                  <div className="md:pl-12">
-                    <div className="hidden md:block absolute left-0 top-5 w-3 h-3 rounded-full bg-red-600 transform -translate-x-1.5"></div>
+                {/* Step 4 */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="hidden md:block"></div>
+                  <div className="md:pl-12 pl-12 relative">
+                    <div className="hidden md:block absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
+                    <div className="md:hidden absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
                     <h3 className="text-xl font-bold mb-2 text-white">4. Domáce cvičenia</h3>
                     <p className="text-gray-300">
                       Dôležitou súčasťou terapie sú domáce cvičenia, ktoré vám pomôžu udržať a zlepšiť výsledky dosiahnuté počas terapeutických sedení. Poskytujem jasné inštrukcie a demonštrácie cvikov.
                     </p>
                   </div>
-                  <div className="md:hidden w-3 h-3 rounded-full bg-red-600 absolute left-0 top-5"></div>
                 </div>
                 
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                  <div className="md:text-right md:pr-12">
-                    <div className="hidden md:block absolute right-0 top-5 w-3 h-3 rounded-full bg-red-600 transform translate-x-1.5"></div>
+                {/* Step 5 */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                  <div className="md:text-right md:pr-12 pl-12 md:pl-0 relative">
+                    <div className="hidden md:block absolute right-0 top-5 w-4 h-4 rounded-full bg-red-600 transform translate-x-2 border-2 border-red-700"></div>
+                    <div className="md:hidden absolute left-0 top-5 w-4 h-4 rounded-full bg-red-600 transform -translate-x-2 border-2 border-red-700"></div>
                     <h3 className="text-xl font-bold mb-2 text-white">5. Sledovanie pokroku</h3>
                     <p className="text-gray-300">
                       Pravidelne hodnotíme váš pokrok a podľa potreby upravujeme terapeutický plán. Cieľom je nielen zbaviť vás aktuálnych ťažkostí, ale aj predchádzať ich návratu v budúcnosti.
                     </p>
                   </div>
-                  <div className="md:hidden w-3 h-3 rounded-full bg-red-600 absolute left-0 top-5"></div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
               </div>
             </div>
