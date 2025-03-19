@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -37,8 +38,15 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-white">
-          Maros Molnár
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/logo.png" 
+            alt="Maros Molnár Logo" 
+            width={150} 
+            height={50} 
+            className="h-auto" 
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

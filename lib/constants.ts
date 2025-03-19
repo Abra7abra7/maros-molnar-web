@@ -147,16 +147,16 @@ export const testimonials = [
   {
     name: "Peter Novák",
     text: "Vďaka Marošovi som sa zbavil dlhodobých bolestí chrbta a zlepšil svoju kondíciu. Jeho prístup je profesionálny a výsledky sú viditeľné.",
-    image: "/images/testimonials/peter.jpg",
+    image: "/images/testimonials/peter.png",
   },
   {
     name: "Jana Kováčová",
     text: "Maroš mi pomohol po zranení kolena. Jeho odborné znalosti a individuálny prístup mi pomohli vrátiť sa späť k športu rýchlejšie, ako som očakávala.",
-    image: "/images/testimonials/jana.jpg",
+    image: "/images/testimonials/jana.png",
   },
   {
     name: "Martin Horváth",
     text: "S Marošom trénujem už rok a výsledky sú neuveriteľné. Jeho tréningové plány sú efektívne a vždy prispôsobené mojim potrebám.",
-    image: "/images/testimonials/martin.jpg",
+    image: "/images/testimonials/martin.png",
   },
 ]
