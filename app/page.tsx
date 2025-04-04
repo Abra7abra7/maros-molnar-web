@@ -1,27 +1,40 @@
-import Image from "next/image";
-import Hero from "@/components/sections/hero";
-import AboutSection from "@/components/sections/about-section";
+"use client"
 
+import { useState } from "react";
+import Image from "next/image";
+
+import AboutSection from "@/components/sections/about-section";
 import Testimonials from "@/components/sections/testimonials";
+import DynamicHero from "@/components/sections/dynamic-hero";
 
 import SectionReveal from "@/components/animations/section-reveal";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import ParallaxEffect from "@/components/animations/parallax-effect";
 import ServiceCard from "@/components/ui/service-card";
 import AnimatedButton from "@/components/ui/animated-button";
+import DynamicBrand from "@/components/ui/dynamic-brand";
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Funkcia na aktualizáciu aktuálneho indexu obrázka
+  const handleImageChange = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+  
   return (
     <>
       <ScrollProgress showPercentage />
       
       <div className="bg-black">
-        <Hero 
-          title="Maros Molnár"
-          subtitle="Profesionálny fitness tréner a fyzioterapeut, ktorý vám pomôže dosiahnuť vaše ciele a zlepšiť kvalitu života."
-          ctaText="Objednať konzultáciu"
-          ctaLink="/kontakt"
-        />
+        <div className="relative">
+          <DynamicHero onImageChange={handleImageChange} />
+          
+          {/* Centrálny dynamický prvok Molnár/Move/Logo - len v hero sekcii */}
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center z-20">
+            <DynamicBrand position="center" imageIndex={currentImageIndex} />
+          </div>
+        </div>
         
         <SectionReveal>
           <AboutSection 

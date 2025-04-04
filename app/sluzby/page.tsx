@@ -2,8 +2,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import { services } from "@/lib/constants";
-
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionReveal from "@/components/animations/section-reveal";
 import ParallaxEffect from "@/components/animations/parallax-effect";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -92,105 +90,6 @@ export default function ServicesPage() {
                 href="/sluzby/profesionalni-sportovci"
                 className="h-full"
               />
-            </SectionReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 bg-black text-white">
-        <div className="container mx-auto px-4">
-          <SectionReveal>
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">Cenník služieb</h2>
-          </SectionReveal>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Fitness Pricing */}
-            <SectionReveal direction="up" delay={0.1}>
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-center text-white">Fitness tréning</h3>
-                <div className="space-y-4">
-                  {services.fitness.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="py-2">
-                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                      </CardContent>
-                      <CardFooter className="pt-2">
-                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </SectionReveal>
-            
-            {/* Physiotherapy Pricing */}
-            <SectionReveal direction="up" delay={0.2}>
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-center text-white">Fyzioterapia</h3>
-                <div className="space-y-4">
-                  {services.physio.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="py-2">
-                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                      </CardContent>
-                      <CardFooter className="pt-2">
-                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </SectionReveal>
-            
-            {/* Transformation Pricing */}
-            <SectionReveal direction="up" delay={0.3}>
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-center text-white">Extrémne Premeny</h3>
-                <div className="space-y-4">
-                  {services.transformation.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="py-2">
-                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                      </CardContent>
-                      <CardFooter className="pt-2">
-                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </SectionReveal>
-            
-            {/* Professional Athletes Pricing */}
-            <SectionReveal direction="up" delay={0.4}>
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-center text-white">Profesionálni športovci</h3>
-                <div className="space-y-4">
-                  {services.athletes.features.map((feature, index) => (
-                    <Card key={index} className="border-none shadow-md hover:shadow-xl transition-shadow duration-300 bg-black border border-gray-800 text-white">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="py-2">
-                        <p className="text-2xl font-bold text-red-600">{feature.price}</p>
-                      </CardContent>
-                      <CardFooter className="pt-2">
-                        <CardDescription className="text-gray-300">{feature.description}</CardDescription>
-                      </CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
             </SectionReveal>
           </div>
         </div>

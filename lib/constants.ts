@@ -25,30 +25,38 @@ export const navLinks = [
     href: "/sluzby",
     children: [
       {
-        title: "Fitness tréning",
-        href: "/sluzby/fitness",
-        description: "Individuálne tréningové plány a osobný tréning",
+        title: "30-dňová výzva",
+        href: "/sluzby/30-dnova-vyzva",
+        description: "Intenzívny program pre rýchle výsledky",
+      },
+      {
+        title: "60-dňová výzva",
+        href: "/sluzby/60-dnova-vyzva",
+        description: "Komplexný program pre dlhodobú premenu",
+      },
+      {
+        title: "Individuálny tréning",
+        href: "/sluzby/individualny-trening",
+        description: "Tréning na mieru podľa vašich potrieb",
       },
       {
         title: "Fyzioterapia",
         href: "/sluzby/fyzioterapia",
         description: "Odborná fyzioterapia a rehabilitácia",
       },
-      {
-        title: "Extrémne Premeny",
-        href: "/sluzby/extremne-premeny",
-        description: "Príbehy úspešných klientov a ich transformácie",
-      },
-      {
-        title: "Profesionálni športovci",
-        href: "/sluzby/profesionalni-sportovci",
-        description: "Spolupráca s vrcholovými športovcami z rôznych disciplín",
-      },
     ],
   },
   {
     title: "Náš tím",
     href: "/nas-tym",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "Premena",
+    href: "/premena",
   },
   {
     title: "Kontakt",

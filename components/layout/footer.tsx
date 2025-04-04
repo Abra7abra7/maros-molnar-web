@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { siteConfig, navLinks } from "@/lib/constants";
 import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className={cn("bg-black text-white py-12", className)}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
