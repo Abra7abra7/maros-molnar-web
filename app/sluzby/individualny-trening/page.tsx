@@ -1,4 +1,3 @@
-import Image from "next/image"
 import SectionReveal from "@/components/animations/section-reveal"
 import AnimatedButton from "@/components/ui/animated-button"
 
