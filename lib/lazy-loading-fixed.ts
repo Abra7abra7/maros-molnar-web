@@ -1,10 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import React from 'react';
+import type { ComponentType, ReactNode } from 'react';
+
+type ComponentImport<Props = Record<string, unknown>> = () => Promise<{ default: ComponentType<Props> }>;
 
 // Simple dynamic import with no JSX in the code
-export const lazyLoadComponent = (importPath, fallback = null) => {
+export const lazyLoadComponent = (importPath: ComponentImport, fallback: ReactNode = null) => {
   return dynamic(() => importPath(), {
     loading: function LoadingComponent() {
       return fallback;
@@ -13,7 +15,7 @@ export const lazyLoadComponent = (importPath, fallback = null) => {
 };
 
 // Simple prefetch function with no complex types
-export const prefetchComponent = (importPath) => {
+export const prefetchComponent = (importPath: ComponentImport) => {
   if (typeof window === 'undefined') return;
   
   setTimeout(() => {
