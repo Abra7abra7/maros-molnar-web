@@ -1,56 +1,29 @@
-/**
- * Utility pre lazy loading komponentov
- * Vylepšuje výkon načítavania stránky, najmä na mobilných zariadeniach
- */
 'use client'
 
 import dynamic from 'next/dynamic'
-import React, { ReactNode } from 'react'
-
-type ComponentImportFunction<P> = () => Promise<{ default: React.ComponentType<P> }>
+import type { ComponentType, ReactNode } from 'react'
 
 /**
- * Lazy loading komponentov s fallback obsahom
+ * Vytvorí dynamicky načítaný komponent
  */
-export function lazyLoadComponent<P extends object>(
-  importFunction: ComponentImportFunction<P>,
-  fallbackContent: ReactNode = null,
-  serverSideRendering = false
+export function lazyLoadComponent<T = {}>(  
+  importFunc: () => Promise<{ default: ComponentType<T> }>,
+  loadingComponent: ReactNode = null
 ) {
-  const DynamicComponent = dynamic(() => importFunction(), {
-    loading: () => <>{fallbackContent}</>,
-    ssr: serverSideRendering
+  return dynamic(importFunc, {
+    loading: () => <>{loadingComponent}</>,
   })
-
-  const WrappedComponent = (props: P) => (
-    <React.Suspense fallback={fallbackContent}>
-      <DynamicComponent {...props} />
-    </React.Suspense>
-  )
-
-  return WrappedComponent
 }
 
 /**
- * Konfigurácia pre preloadovanie dôležitých komponentov
- * Preload môže byť vykonaný v momentoch nízkeho zaťaženia prehliadača
+ * Predbežne načíta komponent
  */
 export function prefetchComponent(
-  importFunction: () => Promise<any>,
-  lowPriority = true
+  importFunc: () => Promise<any>
 ): void {
-  // Only run in browser
   if (typeof window === 'undefined') return
-
-  // Try to use requestIdleCallback for low-priority loading
-  if (lowPriority && typeof window.requestIdleCallback === 'function') {
-    window.requestIdleCallback(() => {
-      importFunction()
-    })
-  } else {
-    // Fallback: Load with delay
-    setTimeout(() => {
-      importFunction()
-    }, 1000)
-  }
+  
+  setTimeout(() => {
+    importFunc()
+  }, 1000)
 }
