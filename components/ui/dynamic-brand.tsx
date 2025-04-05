@@ -23,20 +23,17 @@ export default function DynamicBrand({ className, position = "center", imageInde
     return () => window.removeEventListener("resize", handleResize)
   }, [])
   
-  // Variácie animácie pre desktop a mobil
+  // Variácie animácie pre desktop a mobil - synchronizované s hero sekciou
   const containerVariants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 1 } },
+    animate: { opacity: 1, transition: { duration: 0.8 } },
   }
   
+  // Zjednotené animácie pre všetky nadpisy
   const textVariants = {
-    initial: { opacity: 1 },
-    exit: { opacity: 0, transition: { duration: 0.5 } },
-  }
-  
-  const logoTextVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 0.5 } },
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    exit: { opacity: 0, y: 20, transition: { duration: 0.5 } },
   }
   
   return (
@@ -58,16 +55,22 @@ export default function DynamicBrand({ className, position = "center", imageInde
             className="relative"
             variants={textVariants}
             initial="initial"
+            animate="animate"
             exit="exit"
           >
-            <h1 className={cn(
-              "font-extrabold tracking-tight",
-              isMobile ? "text-5xl" : "text-7xl md:text-9xl"
-            )}>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-red-500">
-                Molnár
-              </span>
-            </h1>
+            <div className="flex items-center">
+              <div className="mr-2 md:mr-4 relative">
+                <div className="bg-red-500 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-2xl md:text-3xl">M</span>
+                </div>
+              </div>
+              <h1 className={cn(
+                "font-extrabold tracking-tight text-red-500",
+                isMobile ? "text-5xl" : "text-7xl md:text-9xl"
+              )}>
+                MOLNÁR
+              </h1>
+            </div>
           </motion.div>
         )}
         
@@ -75,9 +78,10 @@ export default function DynamicBrand({ className, position = "center", imageInde
           <motion.div
             key="move"
             className="relative"
-            variants={logoTextVariants}
+            variants={textVariants}
             initial="initial"
             animate="animate"
+            exit="exit"
           >
             <div className="flex items-center">
               <div className="mr-2 md:mr-4 relative">
@@ -100,9 +104,10 @@ export default function DynamicBrand({ className, position = "center", imageInde
           <motion.div
             key="physio"
             className="relative"
-            variants={logoTextVariants}
+            variants={textVariants}
             initial="initial"
             animate="animate"
+            exit="exit"
           >
             <div className="flex items-center">
               <div className="mr-2 md:mr-4 relative">
