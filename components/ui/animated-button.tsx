@@ -30,13 +30,13 @@ export default function AnimatedButton({
   const [isHovered, setIsHovered] = useState(false);
 
   // Base styles
-  const baseStyles = "relative inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+  const baseStyles = "relative inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none touch-action-manipulation";
   
-  // Size styles
+  // Size styles - optimalizované pre mobilné zariadenia (väčšie dotyková plocha)
   const sizeStyles = {
-    sm: "h-9 px-3 text-sm",
-    md: "h-10 px-4 py-2",
-    lg: "h-12 px-6 text-lg",
+    sm: "h-9 px-3 text-sm min-w-[80px]",
+    md: "h-11 px-4 py-2 min-w-[100px]",
+    lg: "h-12 px-6 py-3 text-lg min-w-[140px]",
   };
   
   // Variant styles
@@ -88,7 +88,13 @@ export default function AnimatedButton({
   // Return as link or button
   if (href) {
     return (
-      <Link href={href} className={buttonStyles}>
+      <Link 
+        href={href} 
+        className={buttonStyles}
+        onTouchStart={() => setIsHovered(true)} 
+        onTouchEnd={() => setTimeout(() => setIsHovered(false), 300)}
+        aria-disabled={disabled ? 'true' : 'false'}
+      >
         {ButtonContent}
       </Link>
     );
@@ -103,6 +109,9 @@ export default function AnimatedButton({
       }}
       className={buttonStyles}
       disabled={disabled}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setTimeout(() => setIsHovered(false), 300)}
+      aria-disabled={disabled ? 'true' : 'false'}
     >
       {ButtonContent}
     </button>

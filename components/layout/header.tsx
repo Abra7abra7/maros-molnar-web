@@ -38,14 +38,15 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center" aria-label="Domovská stránka">
           <Image 
             src="/logo.png" 
-            alt="Maros Molnár Logo" 
+            alt="Maroš Molnár Logo" 
             width={150} 
             height={50} 
-            className="h-auto" 
+            className="h-auto w-auto max-w-[120px] md:max-w-[150px]" 
             priority
+            sizes="(max-width: 768px) 120px, 150px"
           />
         </Link>
 
@@ -101,20 +102,28 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-expanded={isMobileMenuOpen}
+          aria-label={isMobileMenuOpen ? "Zavrieť menu" : "Otvoriť menu"}
+          aria-controls="mobile-menu"
         >
+          <span className="sr-only">{isMobileMenuOpen ? "Zavrieť menu" : "Otvoriť menu"}</span>
           {isMobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6" aria-hidden="true" />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6" aria-hidden="true" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/95 text-white absolute top-full left-0 right-0 p-4">
+        <div 
+          id="mobile-menu"
+          className="md:hidden bg-black/95 text-white absolute top-full left-0 right-0 p-4 animate-fadeIn shadow-lg z-50"
+          role="navigation"
+        >
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <div key={link.href}>
@@ -122,7 +131,7 @@ export default function Header() {
                   <div className="space-y-2">
                     <Link
                       href={link.href}
-                      className="block font-medium text-red-500 hover:text-red-400"
+                      className="block font-medium text-red-500 hover:text-red-400 py-2 px-3 rounded-md transition-colors duration-200"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.title}
@@ -132,7 +141,7 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block py-1 hover:text-red-500"
+                          className="block py-2 px-3 hover:text-red-500 transition-colors duration-200 rounded-md flex items-center"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {child.title}
@@ -143,7 +152,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={link.href}
-                    className="block py-1 hover:text-red-500"
+                    className="block py-2 px-3 hover:text-red-500 rounded-md transition-colors duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.title}
