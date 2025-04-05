@@ -16,7 +16,7 @@ export default function ExtremnePremenPage() {
         <div className="absolute inset-0 z-0 opacity-30 overflow-hidden">
           <div className="relative w-full h-[130%] -mt-20">
             <Image
-              src="/images/transformation-hero.jpg"
+              src="/images/transformation-hero.webp"
               alt="Extrémne premeny"
               fill
               className="object-cover"
@@ -61,7 +61,7 @@ export default function ExtremnePremenPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pred-po-1.jpeg"
+                  src="/images/pred-po-1.webp"
                   alt="Michal - pred a po"
                   width={800}
                   height={600}
@@ -96,7 +96,7 @@ export default function ExtremnePremenPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
               <div className="md:order-2 relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pred-po-2.jpeg"
+                  src="/images/pred-po-2.webp"
                   alt="Jana - pred a po"
                   width={800}
                   height={600}
@@ -131,7 +131,7 @@ export default function ExtremnePremenPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="relative rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pred-po-3.jpeg"
+                  src="/images/pred-po-3.webp"
                   alt="Peter - pred a po"
                   width={800}
                   height={600}

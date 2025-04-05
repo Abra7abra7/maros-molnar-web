@@ -22,7 +22,7 @@ export default function AboutPage() {
         <ParallaxEffect speed={-0.3} className="absolute inset-0">
           <div className="w-full h-[120%] relative">
             <Image
-              src="/images/services/fitness-training-3.jpg"
+              src="/images/services/fitness-training-3.webp"
               alt="About Background"
               fill
               className="object-cover opacity-30"
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <SectionReveal direction="left">
               <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/images/maros-profil.jpg"
+                  src="/images/maros-profil.webp"
                   alt="Maros Molnár"
                   fill
                   className="object-cover"

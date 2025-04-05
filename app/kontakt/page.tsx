@@ -22,7 +22,7 @@ export default function ContactPage() {
         <ParallaxEffect speed={-0.3} className="absolute inset-0">
           <div className="w-full h-[120%] relative">
             <Image
-              src="/images/services/fitness-training-1.jpg"
+              src="/images/services/fitness-training-1.webp"
               alt="Contact Background"
               fill
               className="object-cover opacity-30"

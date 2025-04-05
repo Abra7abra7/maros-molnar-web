@@ -24,7 +24,7 @@ export default function ServicesPage() {
         <ParallaxEffect speed={-0.3} className="absolute inset-0">
           <div className="w-full h-[120%] relative">
             <Image
-              src="/images/services-bg.jpg"
+              src="/images/services-bg.webp"
               alt="Services Background"
               fill
               className="object-cover opacity-30"
@@ -53,7 +53,7 @@ export default function ServicesPage() {
               <ServiceCard
                 title={services.fitness.title}
                 description={services.fitness.description}
-                imageSrc="/images/fitness-service.jpg"
+                imageSrc="/images/fitness-service.webp"
                 href="/sluzby/fitness"
                 className="h-full"
               />
@@ -64,7 +64,7 @@ export default function ServicesPage() {
               <ServiceCard
                 title={services.physio.title}
                 description={services.physio.description}
-                imageSrc="/images/physio-service.jpg"
+                imageSrc="/images/physio-service.webp"
                 href="/sluzby/fyzioterapia"
                 className="h-full"
               />
@@ -75,7 +75,7 @@ export default function ServicesPage() {
               <ServiceCard
                 title={services.transformation.title}
                 description={services.transformation.description}
-                imageSrc="/images/transformation-service.jpg"
+                imageSrc="/images/transformation-service.webp"
                 href="/sluzby/extremne-premeny"
                 className="h-full"
               />
@@ -86,7 +86,7 @@ export default function ServicesPage() {
               <ServiceCard
                 title={services.athletes.title}
                 description={services.athletes.description}
-                imageSrc="/images/athletes-service.jpg"
+                imageSrc="/images/athletes-service.webp"
                 href="/sluzby/profesionalni-sportovci"
                 className="h-full"
               />

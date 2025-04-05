@@ -17,7 +17,7 @@ export default function FitnessPage() {
       <section className="relative py-24 bg-black text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/services/fitness-training-1.jpg"
+            src="/images/services/fitness-training-1.webp"
             alt="Fitness Training Background"
             fill
             className="object-cover opacity-30"
@@ -115,7 +115,7 @@ export default function FitnessPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/services/fitness-training-2.jpg"
+                src="/images/services/fitness-training-2.webp"
                 alt="Fitness tréning"
                 fill
                 className="object-cover"
@@ -134,7 +134,7 @@ export default function FitnessPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-1.jpeg"
+                src="/images/pred-po-1.webp"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -149,7 +149,7 @@ export default function FitnessPage() {
             
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-2.jpeg"
+                src="/images/pred-po-2.webp"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -164,7 +164,7 @@ export default function FitnessPage() {
             
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="/images/pred-po-3.jpeg"
+                src="/images/pred-po-3.webp"
                 alt="Pred a po transformácia"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"

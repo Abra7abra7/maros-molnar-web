@@ -82,7 +82,7 @@ export default function TeamPage() {
       name: "Maroš Molnár",
       position: "Zakladateľ & Hlavný tréner",
       bio: "Maroš je zakladateľom centra a certifikovaným fitness trénerom a fyzioterapeutom s viac ako 10-ročnými skúsenosťami. Špecializuje sa na funkčný tréning, rehabilitáciu po zraneniach a spoluprácu s profesionálnymi športovcami. Jeho prístup kombinuje moderné tréningové metódy s dôrazom na správnu techniku a individuálne potreby klientov.",
-      imageSrc: "/images/team/maros-molnar.jpg",
+      imageSrc: "/images/team/maros-molnar.webp",
       socials: {
         facebook: "https://facebook.com",
         instagram: "https://instagram.com",
@@ -109,7 +109,7 @@ export default function TeamPage() {
       name: "Peter Novák",
       position: "Senior Fitness Tréner",
       bio: "Peter sa špecializuje na silový tréning a budovanie svalovej hmoty. S viac ako 8 rokmi skúseností pomáha klientom dosiahnuť ich ciele prostredníctvom individuálnych tréningových plánov a dôrazu na správnu techniku. Je držiteľom niekoľkých certifikácií v oblasti fitness a výživy.",
-      imageSrc: "/images/team/trainer-1.jpeg",
+      imageSrc: "/images/team/trainer-1.webp",
       socials: {
         instagram: "https://instagram.com",
         email: "peter@marosmolnar.sk",
@@ -119,7 +119,7 @@ export default function TeamPage() {
       name: "Martin Kováč",
       position: "Fitness Tréner & Špecialista na kardio",
       bio: "Martin je odborníkom na kardio tréning a vytrvalostné športy. Ako bývalý profesionálny bežec prináša do svojich tréningov praktické skúsenosti a pomáha klientom zlepšiť ich vytrvalosť, spaľovanie tukov a celkovú kondíciu. Špecializuje sa aj na prípravu na bežecké súťaže.",
-      imageSrc: "/images/team/trainer-2.jpeg",
+      imageSrc: "/images/team/trainer-2.webp",
       socials: {
         instagram: "https://instagram.com",
         email: "martin@marosmolnar.sk",
@@ -129,7 +129,7 @@ export default function TeamPage() {
       name: "Tomáš Horváth",
       position: "Fitness Tréner & Špecialista na funkčný tréning",
       bio: "Tomáš sa zameriava na funkčný tréning a zlepšenie pohybových schopností. Jeho tréningy kombinujú prvky gymnastiky, vzpierania a vysokointenzívneho intervalového tréningu. Pomáha klientom nielen zlepšiť ich fyzickú kondíciu, ale aj predchádzať zraneniam a zlepšiť kvalitu každodenného pohybu.",
-      imageSrc: "/images/team/trainer-3.jpeg",
+      imageSrc: "/images/team/trainer-3.webp",
       socials: {
         instagram: "https://instagram.com",
         email: "tomas@marosmolnar.sk",
@@ -142,7 +142,7 @@ export default function TeamPage() {
       name: "Lucia Veselá",
       position: "Hlavná Fyzioterapeutka",
       bio: "Lucia je certifikovanou fyzioterapeutkou s viac ako 6 rokmi praxe. Špecializuje sa na športovú rehabilitáciu, manuálnu terapiu a liečbu chronických bolestí. Jej holistický prístup kombinuje tradičné fyzioterapeutické techniky s modernými metódami, čo umožňuje klientom rýchlejšie zotavenie a návrat k plnej funkčnosti.",
-      imageSrc: "/images/team/physio-1.jpeg",
+      imageSrc: "/images/team/physio-1.webp",
       socials: {
         linkedin: "https://linkedin.com",
         email: "lucia@marosmolnar.sk",
@@ -159,7 +159,7 @@ export default function TeamPage() {
       <section className="relative bg-black text-white py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
-            src="/images/team/team-hero.jpeg"
+            src="/images/team/team-hero.webp"
             alt="Náš tím"
             fill
             className="object-cover"

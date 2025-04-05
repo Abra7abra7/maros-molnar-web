@@ -17,7 +17,7 @@ export default function PhysioPage() {
       <section className="relative py-24 bg-black text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/services/physiotherapy-1.jpg"
+            src="/images/services/physiotherapy-1.webp"
             alt="Physiotherapy Background"
             fill
             className="object-cover opacity-30"
@@ -68,7 +68,7 @@ export default function PhysioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/services/physiotherapy-2.jpg"
+                src="/images/services/physiotherapy-2.webp"
                 alt="Fyzioterapia"
                 fill
                 className="object-cover"

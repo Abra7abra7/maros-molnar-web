@@ -20,7 +20,7 @@ export default function ProfessionalAthletesPage() {
       <section className="relative bg-black text-white py-20 md:py-32">
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
-            src="/images/pro-athletes-hero.jpg"
+            src="/images/pro-athletes-hero.webp"
             alt="Profesionálni športovci"
             fill
             className="object-cover"
@@ -73,7 +73,7 @@ export default function ProfessionalAthletesPage() {
               <div className="relative">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/hockey-athletes.jpeg"
+                    src="/images/hockey-athletes.webp"
                     alt="Hokejisti"
                     fill
                     className="object-cover"
@@ -112,7 +112,7 @@ export default function ProfessionalAthletesPage() {
               <div className="relative">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/football-athletes.jpeg"
+                    src="/images/football-athletes.webp"
                     alt="Futbalisti"
                     fill
                     className="object-cover"
@@ -151,7 +151,7 @@ export default function ProfessionalAthletesPage() {
               <div className="relative">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/tennis-athletes.jpeg"
+                    src="/images/tennis-athletes.webp"
                     alt="Tenisti"
                     fill
                     className="object-cover"
@@ -190,7 +190,7 @@ export default function ProfessionalAthletesPage() {
               <div className="relative">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative group">
                   <Image
-                    src="/images/basketball-athletes.jpeg"
+                    src="/images/basketball-athletes.webp"
                     alt="Basketbalisti a volejbalisti"
                     fill
                     className="object-cover"
@@ -281,7 +281,7 @@ export default function ProfessionalAthletesPage() {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src="/images/athlete-1.jpg"
+                      src="/images/athlete-1.webp"
                       alt="Športovec"
                       width={48}
                       height={48}
@@ -304,7 +304,7 @@ export default function ProfessionalAthletesPage() {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src="/images/athlete-2.jpg"
+                      src="/images/athlete-2.webp"
                       alt="Športovec"
                       width={48}
                       height={48}
@@ -327,7 +327,7 @@ export default function ProfessionalAthletesPage() {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src="/images/athlete-3.jpg"
+                      src="/images/athlete-3.webp"
                       alt="Športovec"
                       width={48}
                       height={48}

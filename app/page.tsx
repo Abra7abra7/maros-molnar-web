@@ -40,7 +40,7 @@ export default function Home() {
           <AboutSection 
             title="O mne"
             description="Som Maros Molnár, profesionálny fitness tréner a fyzioterapeut s viac ako 10-ročnými skúsenosťami v oblasti športu a rehabilitácie. Mojím cieľom je pomôcť vám dosiahnuť optimálnu fyzickú kondíciu a zdravie prostredníctvom individuálneho prístupu a odborných znalostí.\n\nŠpecializujem sa na funkčný tréning, rehabilitáciu po zraneniach a dlhodobé zlepšenie fyzickej kondície. Verím, že každý človek je jedinečný a preto vyžaduje individuálny prístup k tréningu a rehabilitácii."
-            imageSrc="/images/maros-profil.jpg"
+            imageSrc="/images/maros-profil.webp"
             ctaText="Viac o mne"
             ctaLink="/o-mne"
           />
@@ -51,7 +51,7 @@ export default function Home() {
           <ParallaxEffect speed={-0.2} className="absolute inset-0 z-0">
             <div className="w-full h-[120%] relative">
               <Image
-                src="/images/services/fitness-training-1.jpg"
+                src="/images/services/fitness-training-1.webp"
                 alt="Fitness Training Background"
                 fill
                 className="object-cover opacity-20"
@@ -76,7 +76,7 @@ export default function Home() {
                   <ServiceCard
                     title="Fitness Tréning"
                     description="Individuálne tréningové plány a osobný tréning pre dosiahnutie vašich fitness cieľov. Zameraný na silu, vytrvalosť a celkové zlepšenie kondície."
-                    imageSrc="/images/fitness-service.jpg"
+                    imageSrc="/images/fitness-service.webp"
                     href="/sluzby/fitness"
                   />
                 </SectionReveal>
@@ -85,7 +85,7 @@ export default function Home() {
                   <ServiceCard
                     title="Fyzioterapia"
                     description="Odborná fyzioterapia a rehabilitácia pre liečbu zranení a zlepšenie pohyblivosti. Individuálny prístup a moderné metódy rehabilitácie."
-                    imageSrc="/images/physio-service.jpg"
+                    imageSrc="/images/physio-service.webp"
                     href="/sluzby/fyzioterapia"
                   />
                 </SectionReveal>
@@ -94,7 +94,7 @@ export default function Home() {
                   <ServiceCard
                     title="Extrémne Premeny"
                     description="Príbehy úspešných klientov a ich transformácie. Komplexný program pre tých, ktorí chcú dosiahnuť výraznú zmenu postavy a životného štýlu."
-                    imageSrc="/images/transformation-service.jpg"
+                    imageSrc="/images/transformation-service.webp"
                     href="/sluzby/extremne-premeny"
                   />
                 </SectionReveal>
@@ -103,7 +103,7 @@ export default function Home() {
                   <ServiceCard
                     title="Profesionálni športovci"
                     description="Spolupráca s vrcholovými športovcami z NHL, profesionálnymi futbalistami, tenistami a ďalšími elitami športového sveta."
-                    imageSrc="/images/athletes-service.jpg"
+                    imageSrc="/images/athletes-service.webp"
                     href="/sluzby/profesionalni-sportovci"
                   />
                 </SectionReveal>

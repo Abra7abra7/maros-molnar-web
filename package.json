@@ -30,6 +30,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "glob": "^11.0.1",
+    "sharp": "^0.34.0",
     "tailwindcss": "^4.0.14",
     "typescript": "^5"
   }
